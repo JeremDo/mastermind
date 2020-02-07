@@ -1,0 +1,52 @@
+$orange: #ef6c00;
+$brown: #795548;
+$blue: #2196F3;
+$dark-blue: #01579b;
+$red: #e51c23;
+$green: #4CAF50;
+$violet: #4a148c;
+$teal: #009688;
+$light-teal: #80cbc4;
+$dark-teal:#004d40;
+$lime: #c6ff00 ;
+$amber: #ffc107;
+$cyan: #00bcd4;
+$pink: #e91e63;
+$lightGreen: #64dd17;
+$indigo: #3f51b5;
+$yellow: #ffeb3b;
+
+$color-list: (
+    "orange":  #ef6c00,
+    "brown":  #795548,
+    "blue":  #2196F3,
+    "darkBlue": #01579b,
+    "red":  #e51c23,
+    "green":  #4CAF50,
+    "violet":  #4a148c,
+    "teal":  #009688,
+    "lime":  #c6ff00,
+    "amber":  #ffc107,
+    "cyan":  #00bcd4,
+    "pink":  #e91e63,
+    "lightGreen":  #64dd17,
+    "indigo":  #3f51b5,
+    "yellow":  #ffeb3b,
+    "darkGrey": #343A40,
+    "grey": rgb(202, 199, 199),
+    "white": #fff,
+);
+
+@each $value in $color-list {
+    .text-#{nth($value, 1)} {
+    color: nth($value, 2);
+    }
+
+    .bg-#{nth($value, 1)} {
+    background-color: nth($value, 2);
+    }
+
+    .border-#{nth($value, 1)} {
+    border-color: nth($value, 2);
+    }
+}

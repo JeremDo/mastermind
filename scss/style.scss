@@ -1,0 +1,162 @@
+@import '_variables.scss';
+
+@font-face {
+	font-family: "Montserrat";
+	src: url('./../fonts/Montserrat-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body, html{
+    height: 100%;
+}
+.game{
+    margin: 50px auto;
+    width: 400px;
+    height: 800px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    .overlay{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.712);
+        color: white;
+        z-index: 10;
+        position: absolute;
+        top:0;
+        left: 0;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        .replay{
+            margin-top: 15px;
+            a{
+                padding: 10px;
+                background-color: $amber;
+                border-radius: 10px;
+                text-decoration: none;
+            }
+        }
+        .solution{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 300px;
+            height: 50px;
+            margin: 15px 0;
+            border: 1px solid black;
+            background: white;
+            .itemss{
+                height: 40px;
+                width: 40px;
+                border-radius: 9999px;
+                border: 1px solid black;
+            }
+        }
+    }
+    .main{
+        width: 100%;
+        height: 12.5%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        .play{
+            width: 80%;
+            height: 100%;
+            .colors{
+                width: 100%;
+                height: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                .itemsColored{
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 9999px;
+                    border: 1px solid black;
+                }
+            }
+            .response{
+                width: 100%;
+                height: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                .items{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 9999px;
+                    border: 1px solid black;
+                }
+            }
+        }
+        .validate{
+            height:90%;
+            width: 18%;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 1%;
+            cursor: pointer;
+            background-color: rgb(216, 236, 200);
+            &:hover{
+                background: rgb(146, 228, 79);
+            }
+        }
+    }
+    .history{
+        width: 100%;
+        height: 87.5%;
+        .historyLine{
+            height: 10%;
+            width: 100%;
+            display:flex;
+            align-items: center;
+            border-bottom: 1px dashed black;
+            &:nth-child(10){
+                border-bottom: none;
+            }
+            .historyItems{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 80%;
+                height: 100%;
+                .itemz{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 9999px;
+                    border: 1px solid black;
+                }
+            }
+            .hints{
+                width: 20%;
+                height: 100%;
+                border-left: 1px solid black;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                .flex{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    .hintsItem{
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 9999px;
+                        border: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+}
